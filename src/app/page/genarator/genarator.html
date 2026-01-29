@@ -1,16 +1,15 @@
 
-<div class="row justify-content-center mt-5"  >
+<div class="row justify-content-center"  style="background: linear-gradient(to right,  rgb(219, 234, 254),  rgb(240, 249, 255)); min-height:100vh;">
 
-  <div class="col-md-6" style="margin-top: 200px;">
-    
+  <div class="col-md-6" style="margin-top: 100px;">
+    <h1 class="text-primary text-center">Random Generator</h1>
     @for (item of random; track $index) {
 
       <div class="card shadow-lg mb-4 rounded-4">
 
         <div class="card-body text-center p-4">
 
-         
-
+         <img [src]="item.picture.thumbnail" alt="" class="rounded-circle mb-3 border border-2" width="90" height="90">
           <h3 class="fw-bold text-primary">{{item.name.first}} {{item.name.last}}</h3>
 
           <h6>Location : {{item.location.street.name}}</h6>
