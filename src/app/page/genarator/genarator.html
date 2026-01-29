@@ -1,0 +1,34 @@
+
+<div class="row justify-content-center mt-5"  >
+
+  <div class="col-md-6" style="margin-top: 200px;">
+    
+    @for (item of random; track $index) {
+
+      <div class="card shadow-lg mb-4 rounded-4">
+
+        <div class="card-body text-center p-4">
+
+         
+
+          <h3 class="fw-bold text-primary">{{item.name.first}} {{item.name.last}}</h3>
+
+          <h6>Location : {{item.location.street.name}}</h6>
+          <p class="mb-1">Email : {{item.email}}</p>
+            <p class=" mb-3">Phone : {{item.phone}}</p>
+          <button class="btn btn-success px-4 py-2 rounded-pill fw-semibold"(click)="btnClick()">
+            Generate
+          </button>
+
+        </div>
+
+      </div>
+
+    }
+
+  </div>
+
+</div>
+
+
+
